@@ -1,5 +1,5 @@
 {
-  "name": "weslides-hbs",
+  "name": "jsday-2017-talk",
   "version": "1.0.0",
   "description": "29/03/2017",
   "main": "gulpfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elenatorro/murcia-frontend-presentation.git"
+    "url": "git+https://github.com/elenatorro/jsday-2017-talk.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elenatorro/murcia-frontend-presentation/issues"
+    "url": "https://github.com/elenatorro/jsday-2017-talk/issues"
   },
-  "homepage": "https://github.com/elenatorro/murcia-frontend-presentation#readme",
+  "homepage": "https://github.com/elenatorro/jsday-2017-talk#readme",
   "devDependencies": {
     "gulp-compile-handlebars": "^0.6.1"
   },
