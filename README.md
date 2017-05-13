@@ -1,12 +1,20 @@
-# Presentación Murcia Frontend
+# JSDay 2017
 
-29/03/2017
+Redux Through Music
 
+- Slides: [Redux Through Music](https://elenatorro.github.io/jsday-2017-talk/)
+- [Code](https://github.com/elenatorro/jsday-2017-talk)
+- [webslides.tv](https://webslides.tv/)
 
-## Midi & Redux
+## Run
 
-*Cómo reproducir un archivo midi usando redux.*
+```
+npm install
 
-- Presentación: [Midi & Redux](https://elenatorro.github.io/murcia-frontend-presentation/)
-- [Proyecto en GitHub](https://github.com/elenatorro/midi-redux)
-- Slides: [webslides.tv](https://webslides.tv/)
+```
+
+```
+gulp
+```
+
+Open local server.
