@@ -1,0 +1,63 @@
+<section class="bg-black">
+  <span class="background" style="background-image:url('./static/images/screenshots/midi-redux-screenshot.png');"></span>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid vertical-align aligncenter">
+      <div class="column">
+        <figure>
+          <img src="static/images/midi-redux-schema.png" alt="Midi Redux Schema">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>React Play Button</h2>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="html">
+&lt;PlayButton /&gt;
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>React Play Button</h2>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+class PlayButton extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const play = this.props.playerActions.play;
+
+    return (
+      &lt;button
+        className="play-button"
+        onClick={play}
+      /&gt;
+    );
+  }
+};
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-black">
+  <span class="background" style="background-image:url('./static/images/gifs/instruments-playing.gif'); opacity:0.8;"></span>
+  <div class="wrap aligncenter">
+    <h1 class="text-data"><strong>DEMO</strong></h1>
+  </div>
+</section>

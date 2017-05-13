@@ -1,0 +1,199 @@
+<section>
+  <div class="wrap aligncenter fadeIn">
+    <h1 class="text-data"><strong>MIDI File 📄 => 🎶</strong></h1>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>MIDI File Structure</h2>
+    <ul class="flexblock border blink">
+      <li><a href=""><strong>Block</strong></a></li>
+      <li><a href=""><strong>Info</strong></a></li>
+      <li><a href=""><strong>Length</strong></a></li>
+      <li><a href=""><strong>Content</strong></a></li>
+
+      <li><a href=""><strong>Header</strong></a></li>
+      <li><a href="">
+        <ul>
+          <li>Signature</li>
+          <li>Length</li>
+          <li>Format</li>
+          <li>Nº of Tracks</li>
+          <li>Temporal resolution</li>
+        </ul>
+      </a></li>
+      <li><a href="">
+          <ul>
+            <li>4</li>
+            <li>4</li>
+            <li>2</li>
+            <li>2</li>
+            <li>2</li>
+          </ul>
+        </a>
+      </li>
+      <li><a href="">
+          <ul>
+            <li>"MThd"</li>
+            <li>6</li>
+            <li>0 | 1 | 2</li>
+            <li>(if type = 0, then 1)</li>
+            <li>Pulse Per Quarter Note (PPQN)</li>
+          </ul>
+        </a>
+      </li>
+
+      <li><a href=""><strong>Track</strong></a></li>
+      <li><a href="">
+        <ul>
+          <li>Signature</li>
+          <li>Length</li>
+          <li>Data</li>
+        </ul>
+      </a></li>
+      <li><a href="">
+          <ul>
+            <li>4</li>
+            <li>4</li>
+            <li>N</li>
+          </ul>
+        </a>
+      </li>
+      <li><a href="">
+          <ul>
+            <li>"MTrk"</li>
+            <li>N</li>
+            <li>MIDI Messages (channel, system, deltaTimes...)</li>
+          </ul>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+{{!--  Header --}}
+
+<section>
+  <div class="wrap">
+    <div class="grid vertical-align">
+      <div class="column">
+        <h3><strong>Header</strong></h3>
+      </div>
+
+      <div class="column">
+<pre>
+"header": {
+  "formatType": 1,
+  "trackCount": 10,
+  "ticksPerBeat": 96
+}
+</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <div class="grid vertical-align">
+      <div class="column">
+        <h3><strong>Note ON</strong></h3>
+      </div>
+
+      <div class="column">
+<pre>
+{
+  "deltaTime": 1660,
+  "channel": 0,
+  "type": "channel",
+  "noteNumber": 35,
+  "velocity": 115,
+  "subtype": "noteOn"
+}
+</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <div class="grid vertical-align">
+      <div class="column">
+        <h3><strong>Note ON</strong></h3>
+      </div>
+
+      <div class="column">
+<pre><code class="javascript">
+/* ... */
+
+const timeoutId = setTimeout(() => {
+  dispatch({type, payload});
+
+  InstrumentUtils.play(
+    noteNumber,
+    instrument,
+    currentTime,
+    velocity
+  );
+
+  clearTimeout(timeoutId);
+}, deltaTime);
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid vertical-align">
+      <div class="column">
+        <h3><strong>Note OFF</strong></h3>
+      </div>
+
+      <div class="column">
+<pre><code class="javascript">
+/* ... */
+
+const timeoutId = setTimeout(() => {
+  dispatch({type, payload});
+
+  instrument.stop();
+
+  clearTimeout(timeoutId);
+}, deltaTime);
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <h2>Delta Time ⏰ (in milliseconds)</h2>
+
+    <ul>
+      <li>TicksPerBeat = 52 (Header)</li>
+      <li>Microseconds Per Beat = 689655 (SetTempo Event)</li>
+      <li>Microseconds Per Minute = 60000000 (Constant)</li>
+    </ul>
+
+    <ul class="flexblock border blink">
+      <li><a href=""><strong>Tempo</strong></a></li>
+      <li><a href=""><strong>Binary</strong></a></li>
+      <li><a href=""><strong>Pulses</strong></a></li>
+      <li><a href=""><strong>Milliseconds</strong></a></li>
+
+      <li><a href="">60000000 / 689655 = 87 BMP</a></li>
+      <li><a href="">11111111 01111111</a></li>
+      <li><a href="">16.383</a></li>
+      <li><a href="">16.383 * (60 / (87 * 52)) * 1000 = 217281</a></li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,97 @@
+<section>
+  <div class="wrap aligncenter">
+    <h2>Soundfont Player</h2>
+    <p>(action creator)</p>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+export function loadSoundfontInstrument(instrument) {
+  const state = getState();
+  const instrumentPath = _getInstrumentPath.call(this, instrument);
+  let ac = state.midi.audioContext;
+
+  Soundfont.instrument(ac, instrumentPath)
+    .then((soundfontInstrument) => {
+      dispatch({
+        type: MidiConnect.MIDI_LOAD_INSTRUMENT,
+        payload: { soundfontInstrument }
+      });
+    });
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>MIDI Reducer</h2>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+const initialState = {
+  message: '',
+  inputs: [],
+  data: null,
+  audioContext: new window.AudioContext()
+  notes: {}
+};
+
+export default function MIDIEventsReducer(state=initialState, action) {
+  const { type, payload } = action;
+
+  switch (type) {
+    case MIDIAction.NOTE_ON:
+    /* ... */
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>Settings Reducer</h2>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+const initialState = {
+  midiAccess: null,
+  webApiAudio: false,
+  gainNode: null,
+  soundfontInstrument: null
+};
+
+export default function MIDIEventsReducer(state=initialState, action) {
+  const { type, payload } = action;
+  switch (type) {
+    case MIDIConnect.MIDI_SUCCESS:
+    /* ... */
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>Combine Reducers</h2>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+import { combineReducers } from 'redux';
+
+import midi from '../reducers/midi-reducer';
+import settings from '../reducers/settings-reducer';
+
+const rootReducer = combineReducers({
+  midi,
+  settings
+});
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>

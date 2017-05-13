@@ -1,0 +1,99 @@
+<section>
+  <div class="wrap size-50 aligncenter">
+    <div class="bg-white shadow">
+      <ul class="flexblock reasons">
+        <li>
+          <h2>MIDI API</h2>
+        </li>
+        <li>
+          <h2>redux-thunk</h2>
+        </li>
+        <li>
+          <h2>bindActionCreators</h2>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid vertical-align aligncenter">
+      <div class="column">
+        <figure>
+          <img src="static/images/screenshots/web-midi-api-support.png" alt="Midi API Support">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>1. Request MIDI Access</h2>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+if (navigator.requestMIDIAccess) {
+  navigator.requestMIDIAccess({sysex: false})
+    .then(midiSetupActions.midiSuccess)
+    .catch(midiSetupActions.midiFailure);
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>2. Dispatch a MIDI Message</h2>
+    <p>redux-thunk to the rescue!</p>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+export function midiMessage(event) {
+  return (dispatch, getState) => {
+    const midiMessage = MidiUtils.getEventType(event.data);
+    const message = MidiMessages[midiMessage];
+
+    dispatch(MidiEvents[message](event));
+  };
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>3. Bind to MIDI Events</h2>
+    <p>bindActionCreators</p>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+/* ... */
+const midiMessages = bindActionCreators(MidiMessages, dispatch);
+
+for(let input = inputs.next(); input && !input.done; input = inputs.next()) {
+  input.value.onmidimessage = midiMessages.midiMessage;
+}
+/* ... */
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid vertical-align aligncenter">
+      <div class="column">
+        <figure>
+          <img src="static/images/screenshots/midi-event-example.png" alt="Midi Event Example">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

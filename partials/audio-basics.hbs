@@ -1,0 +1,76 @@
+<section>
+  <div class="wrap">
+    <h3>🎵</h3>
+    <ul class="flexblock steps aligncenter">
+      <li>
+        <h2>Note</h2>
+        <br/>
+        <span>DO<sub>4</sub></span>
+      </li>
+      <li>
+        <div class="process step-2"></div>
+        <h2>Note Number</h2>
+        <br/>
+        <span>60</span>
+      </li>
+      <li>
+        <div class="process step-3"></div>
+        <h2>Calc</h2>
+
+        <h4>
+          f = 440·2<sup>(h - 69) / 12</sup>
+        </h4>
+        <br/>
+        <sub>(h = 60)</sub>
+      </li>
+      <li>
+        <div class="process step-4"></div>
+        <h2>Frequency 🔊</h2>
+        <span>
+          261,63<small>Hz</small>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>WebAudio API </h2>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+function getFrequency(note) {
+  const LA_HZ  = 440;
+  const LA_DEC = 69;
+  const OCTAVE = 12;
+
+  return LA_HZ * Math.pow(2, (note - LA_DEC) / OCTAVE);
+}
+
+function generateOscillator(note, audioContext) {
+  const frequency = this.getFrequency(note);
+  let oscillator = audioContext.createOscillator();
+
+  oscillator.type = 'square';
+  oscillator.connect(audioContext.destination);
+  oscillator.frequency.value = frequency;
+
+  return oscillator;
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="aligncenter">
+      <div class="background-center">
+        <h1>Music Notes</h1>
+        <figure>
+          <img src="static/images/midi-note-numbers.gif" alt="Midi Note Numbers">
+        </figure>
+      </div>
+  </div>
+</section>

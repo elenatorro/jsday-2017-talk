@@ -1,0 +1,121 @@
+<section class="bg-black">
+  <span class="background" style="background-image:url('./static/images/mezclas_2.jpeg'); opacity:0.3;"></span>
+  <div class="wrap aligncenter fadeIn">
+    <h1 class="text-data"><strong>MIDI Basics</strong></h1>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <div class="grid vertical-align aligncenter">
+      <div class="column">
+        <h3><strong>Physical Devices</strong></h3>
+        <p>Any device can be controlled (if it understands MIDI)</p>
+      </div>
+      <div class="column">
+        <h3><strong>Controllers</strong></h3>
+        <p>Anything can be a MIDI controller (if it speaks MIDI)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap size-50 aligncenter">
+    <div class="bg-white shadow">
+      <h1>MIDI Messages</h1>
+      <ul class="flexblock aligncenter">
+        <li>
+          <h2>Control orders</h2>
+        </li>
+        <li>
+          <h2>Binary</h2>
+        </li>
+        <li>
+          <h2>10 Bits</h2>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap aligncenter fadeIn">
+    <h1 class="text-data">0 E n n n n n n n 1</h1>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap aligncenter">
+    <h1><strong>1</strong> e e e c c c c</h1>
+    <p>Status Byte</p>
+    <h1><strong>0</strong> n n n n n n</h1>
+    <p>Data Byte</p>
+    <h1><strong>0</strong> n n n n n n</h1>
+    <p>Data Byte (optional)</p>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <h2>Note ON</h2>
+    <ul class="flexblock border blink">
+      <li><a href=""><strong>Message</strong></a></li>
+      <li><a href=""><strong>Status Byte</strong></a></li>
+      <li><a href=""><strong>Data Byte 1</strong></a></li>
+      <li><a href=""><strong>Data Byte 2</strong></a></li>
+
+      <li><a href=""><strong>Note ON</strong></a></li>
+      <li><a href=""><strong>1001 nnnn (9N)</strong>1001 0000 (144 + channel)</a></li>
+      <li><a href=""><strong>note number</strong>0011 1100 (60)</a></li>
+      <li><a href=""><strong>velocity</strong>0101 1111 (95)</a></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Note OFF</h2>
+    <ul class="flexblock border blink">
+      <li><a href=""><strong>Message</strong></a></li>
+      <li><a href=""><strong>Status Byte</strong></a></li>
+      <li><a href=""><strong>Data Byte 1</strong></a></li>
+      <li><a href=""><strong>Data Byte 2</strong></a></li>
+
+      <li><a href=""><strong>Note OFF</strong></a></li>
+      <li><a href=""><strong>1000 nnnn (8N)</strong>1000 0000 (128 + channel)</a></li>
+      <li><a href=""><strong>note number</strong>0011 1100 (60)</a></li>
+      <li><a href=""><strong>velocity</strong>0000 0000 (0)</a></li>
+
+      <li><a href=""><strong>Note ON --> OFF</strong></a></li>
+      <li><a href=""><strong>1001 nnnn (9N)</strong>1000 0000 (144 + channel)</a></li>
+      <li><a href=""><strong>note number</strong>0011 1100 (60)</a></li>
+      <li><a href=""><strong>velocity</strong>0000 0000 (0)</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <ul class="flexblock border blink">
+      <li><a href=""><strong>Message</strong></a></li>
+      <li><a href=""><strong>Status Byte</strong></a></li>
+      <li><a href=""><strong>Data Byte 1</strong></a></li>
+      <li><a href=""><strong>Data Byte 2</strong></a></li>
+
+      <li><a href=""><strong>Control Change</strong></a></li>
+      <li><a href=""><strong>1011 nnnn (BN)</strong>1011 0001</a></li>
+      <li><a href=""><strong>Control Type</strong>0000 0111</a></li>
+      <li><a href=""><strong>Value</strong>0111 1111</a></li>
+    </ul>
+    </ul>
+  </div>
+</section>
+
+<section class="bg-black">
+  <span class="background" style="background-image:url('./static/images/count.gif');"></span>
+</section>

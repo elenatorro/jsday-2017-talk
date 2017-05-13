@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Midi &amp; Redux</title>
+    <meta name="description" content="">
+  
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/base.css">
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/colors.css">
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/svg-icons.css">
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/github.css">
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@eletorro"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@eletorro"> <!-- EDIT -->
+    <meta name="twitter:title" content="Elena Torro"> <!-- EDIT -->
+  
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+  
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+  </head>
+
+  <body>
+    <main role="main">
+      <article id="webslides" class="horizontal">
+
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/midi.jpeg'); opacity:0.3;"></span>
+          <div class="wrap aligncenter">
+            <h1 class="text-data"><strong>Redux through music</strong></h1>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <div class="card-50">
+            <figure>
+              <img src="/static/images/elena-poser.jpg" alt="Elena Torro">
+            </figure>
+            <div class="flex-content">
+              <h2>
+                Elena Torró
+              </h2>
+              <p>Software Developer at <a href="https://www.myabckit.com/">myABCKit</a></p>
+              <ul class="description">
+                <li>
+                  <strong class="text-label">From</strong> Murcia, Spain
+                </li>
+                <li>
+                  <strong class="text-label">Twitter</strong> @eletorro
+                </li>
+                <li>
+                  <strong class="text-label">GitHub</strong> @elenatorro
+                </li>
+                <li>
+                  I 💖 Education + Technology
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter fadeIn">
+            <h1 class="text-data"><strong>MIDI + Redux?</strong> 🤔</h1>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <ul class="flexblock reasons">
+                <li>
+                  <h2>Redux ⚛️</h2>
+                  <p>Introduction, schemas and code</p>
+                </li>
+                <li>
+                  <h2>MIDI 🎹</h2>
+                  <p>Basic concepts, Web API Midi</p>
+                </li>
+                <li>
+                  <h2>Demos 💻</h2>
+                  <p>Live demos and code</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/midi-dj.jpeg'); opacity:0.3;"></span>
+          <div class="wrap aligncenter">
+            <h1 class="text-data"><strong>What's MIDI? ✋</strong></h1>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>❌ This is NOT MIDI ❌</h2>
+            <ul class="flexblock features">
+              <li>
+                <div>
+                  <h2>
+                    <span>🔇</span> An audio format
+                  </h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <span>🎼</span> A music language
+                  </h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <span>🎮</span> 8-bit music
+                  </h2>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>✅ This is MIDI ✅</h2>
+            <h3>
+              <strong>M</strong>usical
+              <strong>I</strong>nstrument
+              <strong>D</strong>igital
+              <strong>I</strong>nterface
+            </h3>
+            <ul class="flexblock features">
+              <li>
+                <div>
+                  <h2>
+                    <span>📞</span> A digital communication protocol
+                  </h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <span>📝</span> A technical standard
+                  </h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>
+                    <span>👤</span> A digital interface
+                  </h2>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/redux-logo.png'); opacity:0.7;"></span>
+          <div class="wrap aligncenter fadeIn">
+            <h1 class="text-data"><strong>What's Redux? ✋</strong></h1>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="content-center">
+              <blockquote>
+                <p>Redux library itself is only a set of helpers to “mount” reducers to a single global store object. You can use as little, or as much of Redux, as you like.</p>
+                <p><cite><a href="http://twitter.com/danabramov/">@danabramov</a></cite></p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <h1>Redux (I)</h1>
+              <ul class="flexblock aligncenter">
+                <li>
+                  <h2>2kB, including dependencies</h2>
+                </li>
+                <li>
+                  <h2>Flux + Elm</h2>
+                </li>
+                <li>
+                  <h2>It can be used with any framework, library...</h2>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <h1>Redux (II)</h1>
+              <ul class="flexblock aligncenter">
+                <li>
+                  <h2>The Store: state of your app is stored in an object tree</h2>
+                </li>
+                <li>
+                  <h2>Attempts to make state mutations predictable</h2>
+                </li>
+                <li>
+                  <h2>Control the state of the application</h2>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <h1>Basics</h1>
+              <ul class="flexblock reasons">
+                <li>
+                  <h2>📦 The STORE is a single source of truth</h2>
+                  <p>One single store</p>
+                </li>
+                <li>
+                  <h2>🎬 Use ACTIONS to change the state</h2>
+                  <p>State is read-only</p>
+                </li>
+                <li>
+                  <h2>👼 The REDUCERS are pure</h2>
+                  <p>Take the previous state => return the next state</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <figure>
+                  <img src="static/images/diagram-example/redux1.png" alt="Redux 1">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <figure>
+                  <img src="static/images/diagram-example/redux2.png" alt="Redux 1">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <figure>
+                  <img src="static/images/diagram-example/redux3.png" alt="Redux 1">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <figure>
+                  <img src="static/images/diagram-example/redux4.png" alt="Redux 1">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <figure>
+                  <img src="static/images/diagram-example/redux5.png" alt="Redux 1">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <figure>
+                  <img src="static/images/diagram-example/redux6.png" alt="Redux 1">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter fadeIn">
+            <h1 class="text-data">😲 That's it! 🔮</h1>
+          </div>
+        </section>
+
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/binary.gif'); opacity:0.3;"></span>
+          <div class="wrap aligncenter">
+            <h1 class="text-data"><strong>Show me the <code>code</code></strong></h1>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter">
+            <h2>REDUCER</h2>
+            <p>Initial State</p>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        const initialState = {
+          message: "Init Message",
+          midiAccess: null,
+          inputs: [], /* MIDI Inputs*/
+          audioContext: new window.AudioContext(),
+          gainNode: null,
+          notes: {}
+        };
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>REDUCER</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        export default function MIDIEventsReducer(state=initialState, action) {
+            const { type, payload } = action;
+        
+            switch (type) {
+              case MIDIAction.NOTE_ON:
+              case MIDIAction.NOTE_OFF:
+                return {
+                  ...state,
+                  notes: payload.notes,
+                  message: payload.message
+                }
+              /* more cases */
+              default:
+                return state;
+            }
+        }
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>ACTIONS</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        export default Object.freeze({
+          NOTE_ON: 'noteOn',
+          NOTE_OFF: 'noteOff',
+          CONTROLLER: 'controller'
+        });
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>ACTION CREATORS</h2>
+            <div class="grid">
+              <div class="column">
+        <pre><code class="javascript">
+        export function noteOn(event) {
+          return (dispatch, getState) => {
+            const state = getState();
+            const message = event.data;
+            const note = MidiUtils.getNote(message);
+        
+            let notes = state.midi.notes;
+            let ac = state.midi.audioContext;
+        
+            if (!notes[note]) {
+              notes[note] = AudioUtils.generateOscillator(note, ac);
+              notes[note].start();
+            }
+        
+            dispatch({
+              type: MidiAction.NOTE_ON,
+              payload: { message, notes }
+            });
+          };
+        }
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/gifs/playing-piano.gif'); opacity:0.7;"></span>
+          <div class="wrap aligncenter">
+            <h1 class="text-data"><strong>Demo</strong></h1>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>🎵</h3>
+            <ul class="flexblock steps aligncenter">
+              <li>
+                <h2>Note</h2>
+                <br/>
+                <span>DO<sub>4</sub></span>
+              </li>
+              <li>
+                <div class="process step-2"></div>
+                <h2>Note Number</h2>
+                <br/>
+                <span>60</span>
+              </li>
+              <li>
+                <div class="process step-3"></div>
+                <h2>Calc</h2>
+        
+                <h4>
+                  f = 440·2<sup>(h - 69) / 12</sup>
+                </h4>
+                <br/>
+                <sub>(h = 60)</sub>
+              </li>
+              <li>
+                <div class="process step-4"></div>
+                <h2>Frequency 🔊</h2>
+                <span>
+                  261,63<small>Hz</small>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>WebAudio API </h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        function getFrequency(note) {
+          const LA_HZ  = 440;
+          const LA_DEC = 69;
+          const OCTAVE = 12;
+        
+          return LA_HZ * Math.pow(2, (note - LA_DEC) / OCTAVE);
+        }
+        
+        function generateOscillator(note, audioContext) {
+          const frequency = this.getFrequency(note);
+          let oscillator = audioContext.createOscillator();
+        
+          oscillator.type = 'square';
+          oscillator.connect(audioContext.destination);
+          oscillator.frequency.value = frequency;
+        
+          return oscillator;
+        }
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="aligncenter">
+              <div class="background-center">
+                <h1>Music Notes</h1>
+                <figure>
+                  <img src="static/images/midi-note-numbers.gif" alt="Midi Note Numbers">
+                </figure>
+              </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <ul class="flexblock reasons">
+                <li>
+                  <h2>MIDI API</h2>
+                </li>
+                <li>
+                  <h2>redux-thunk</h2>
+                </li>
+                <li>
+                  <h2>bindActionCreators</h2>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <figure>
+                  <img src="static/images/screenshots/web-midi-api-support.png" alt="Midi API Support">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>1. Request MIDI Access</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        if (navigator.requestMIDIAccess) {
+          navigator.requestMIDIAccess({sysex: false})
+            .then(midiSetupActions.midiSuccess)
+            .catch(midiSetupActions.midiFailure);
+        }
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>2. Dispatch a MIDI Message</h2>
+            <p>redux-thunk to the rescue!</p>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        export function midiMessage(event) {
+          return (dispatch, getState) => {
+            const midiMessage = MidiUtils.getEventType(event.data);
+            const message = MidiMessages[midiMessage];
+        
+            dispatch(MidiEvents[message](event));
+          };
+        }
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>3. Bind to MIDI Events</h2>
+            <p>bindActionCreators</p>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        /* ... */
+        const midiMessages = bindActionCreators(MidiMessages, dispatch);
+        
+        for(let input = inputs.next(); input && !input.done; input = inputs.next()) {
+          input.value.onmidimessage = midiMessages.midiMessage;
+        }
+        /* ... */
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <figure>
+                  <img src="static/images/screenshots/midi-event-example.png" alt="Midi Event Example">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/mezclas_2.jpeg'); opacity:0.3;"></span>
+          <div class="wrap aligncenter fadeIn">
+            <h1 class="text-data"><strong>MIDI Basics</strong></h1>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <h3><strong>Physical Devices</strong></h3>
+                <p>Any device can be controlled (if it understands MIDI)</p>
+              </div>
+              <div class="column">
+                <h3><strong>Controllers</strong></h3>
+                <p>Anything can be a MIDI controller (if it speaks MIDI)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap size-50 aligncenter">
+            <div class="bg-white shadow">
+              <h1>MIDI Messages</h1>
+              <ul class="flexblock aligncenter">
+                <li>
+                  <h2>Control orders</h2>
+                </li>
+                <li>
+                  <h2>Binary</h2>
+                </li>
+                <li>
+                  <h2>10 Bits</h2>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap aligncenter fadeIn">
+            <h1 class="text-data">0 E n n n n n n n 1</h1>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h1><strong>1</strong> e e e c c c c</h1>
+            <p>Status Byte</p>
+            <h1><strong>0</strong> n n n n n n</h1>
+            <p>Data Byte</p>
+            <h1><strong>0</strong> n n n n n n</h1>
+            <p>Data Byte (optional)</p>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap">
+            <h2>Note ON</h2>
+            <ul class="flexblock border blink">
+              <li><a href=""><strong>Message</strong></a></li>
+              <li><a href=""><strong>Status Byte</strong></a></li>
+              <li><a href=""><strong>Data Byte 1</strong></a></li>
+              <li><a href=""><strong>Data Byte 2</strong></a></li>
+        
+              <li><a href=""><strong>Note ON</strong></a></li>
+              <li><a href=""><strong>1001 nnnn (9N)</strong>1001 0000 (144 + channel)</a></li>
+              <li><a href=""><strong>note number</strong>0011 1100 (60)</a></li>
+              <li><a href=""><strong>velocity</strong>0101 1111 (95)</a></li>
+            </ul>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <h2>Note OFF</h2>
+            <ul class="flexblock border blink">
+              <li><a href=""><strong>Message</strong></a></li>
+              <li><a href=""><strong>Status Byte</strong></a></li>
+              <li><a href=""><strong>Data Byte 1</strong></a></li>
+              <li><a href=""><strong>Data Byte 2</strong></a></li>
+        
+              <li><a href=""><strong>Note OFF</strong></a></li>
+              <li><a href=""><strong>1000 nnnn (8N)</strong>1000 0000 (128 + channel)</a></li>
+              <li><a href=""><strong>note number</strong>0011 1100 (60)</a></li>
+              <li><a href=""><strong>velocity</strong>0000 0000 (0)</a></li>
+        
+              <li><a href=""><strong>Note ON --> OFF</strong></a></li>
+              <li><a href=""><strong>1001 nnnn (9N)</strong>1000 0000 (144 + channel)</a></li>
+              <li><a href=""><strong>note number</strong>0011 1100 (60)</a></li>
+              <li><a href=""><strong>velocity</strong>0000 0000 (0)</a></li>
+            </ul>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap">
+            <ul class="flexblock border blink">
+              <li><a href=""><strong>Message</strong></a></li>
+              <li><a href=""><strong>Status Byte</strong></a></li>
+              <li><a href=""><strong>Data Byte 1</strong></a></li>
+              <li><a href=""><strong>Data Byte 2</strong></a></li>
+        
+              <li><a href=""><strong>Control Change</strong></a></li>
+              <li><a href=""><strong>1011 nnnn (BN)</strong>1011 0001</a></li>
+              <li><a href=""><strong>Control Type</strong>0000 0111</a></li>
+              <li><a href=""><strong>Value</strong>0111 1111</a></li>
+            </ul>
+            </ul>
+          </div>
+        </section>
+        
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/count.gif');"></span>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter">
+            <h2>Soundfont Player </h2>
+            <a href="https://github.com/danigb/soundfont-player">https://github.com/danigb/soundfont-player</a>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        Soundfont.instrument(ac, 'acoustic_piano').then(function (piano) {
+          piano.play('C4')
+        });
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>MIDI JS Soundfonts</h2>
+            <a href="https://github.com/gleitz/midi-js-soundfonts">https://github.com/gleitz/midi-js-soundfonts</a>
+            <div class="grid vertical-align">
+              <div class="column">
+                <figure>
+                  <img src="static/images/screenshots/midi-js-soundfonts.png" alt="Redux 1">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>MIDI Instruments</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        export const MIDIInstruments = {
+          0: 'acoustic_grand_piano',
+          1: 'bright_acoustic_piano',
+          2: 'electric_grand_piano',
+          3: 'honkytonk_piano',
+          4: 'electric_piano_1',
+        
+          /**/
+        
+          125: 'helicopter',
+          126: 'applause',
+          127: 'gunshot'
+        }
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/binary.gif'); opacity:0.3;"></span>
+          <div class="wrap aligncenter">
+            <h1 class="text-data"><strong>Show me the <code>code</code></strong></h1>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter">
+            <h2>Soundfont Player</h2>
+            <p>(action creator)</p>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        export function loadSoundfontInstrument(instrument) {
+          const state = getState();
+          const instrumentPath = _getInstrumentPath.call(this, instrument);
+          let ac = state.midi.audioContext;
+        
+          Soundfont.instrument(ac, instrumentPath)
+            .then((soundfontInstrument) => {
+              dispatch({
+                type: MidiConnect.MIDI_LOAD_INSTRUMENT,
+                payload: { soundfontInstrument }
+              });
+            });
+        }
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>MIDI Reducer</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        const initialState = {
+          message: '',
+          inputs: [],
+          data: null,
+          audioContext: new window.AudioContext()
+          notes: {}
+        };
+        
+        export default function MIDIEventsReducer(state=initialState, action) {
+          const { type, payload } = action;
+        
+          switch (type) {
+            case MIDIAction.NOTE_ON:
+            /* ... */
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>Settings Reducer</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        const initialState = {
+          midiAccess: null,
+          webApiAudio: false,
+          gainNode: null,
+          soundfontInstrument: null
+        };
+        
+        export default function MIDIEventsReducer(state=initialState, action) {
+          const { type, payload } = action;
+          switch (type) {
+            case MIDIConnect.MIDI_SUCCESS:
+            /* ... */
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>Combine Reducers</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        import { combineReducers } from 'redux';
+        
+        import midi from '../reducers/midi-reducer';
+        import settings from '../reducers/settings-reducer';
+        
+        const rootReducer = combineReducers({
+          midi,
+          settings
+        });
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap aligncenter fadeIn">
+            <h1 class="text-data"><strong>MIDI File 📄 => 🎶</strong></h1>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <h2>MIDI File Structure</h2>
+            <ul class="flexblock border blink">
+              <li><a href=""><strong>Block</strong></a></li>
+              <li><a href=""><strong>Info</strong></a></li>
+              <li><a href=""><strong>Length</strong></a></li>
+              <li><a href=""><strong>Content</strong></a></li>
+        
+              <li><a href=""><strong>Header</strong></a></li>
+              <li><a href="">
+                <ul>
+                  <li>Signature</li>
+                  <li>Length</li>
+                  <li>Format</li>
+                  <li>Nº of Tracks</li>
+                  <li>Temporal resolution</li>
+                </ul>
+              </a></li>
+              <li><a href="">
+                  <ul>
+                    <li>4</li>
+                    <li>4</li>
+                    <li>2</li>
+                    <li>2</li>
+                    <li>2</li>
+                  </ul>
+                </a>
+              </li>
+              <li><a href="">
+                  <ul>
+                    <li>"MThd"</li>
+                    <li>6</li>
+                    <li>0 | 1 | 2</li>
+                    <li>(if type = 0, then 1)</li>
+                    <li>Pulse Per Quarter Note (PPQN)</li>
+                  </ul>
+                </a>
+              </li>
+        
+              <li><a href=""><strong>Track</strong></a></li>
+              <li><a href="">
+                <ul>
+                  <li>Signature</li>
+                  <li>Length</li>
+                  <li>Data</li>
+                </ul>
+              </a></li>
+              <li><a href="">
+                  <ul>
+                    <li>4</li>
+                    <li>4</li>
+                    <li>N</li>
+                  </ul>
+                </a>
+              </li>
+              <li><a href="">
+                  <ul>
+                    <li>"MTrk"</li>
+                    <li>N</li>
+                    <li>MIDI Messages (channel, system, deltaTimes...)</li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        
+        
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Header</strong></h3>
+              </div>
+        
+              <div class="column">
+        <pre>
+        "header": {
+          "formatType": 1,
+          "trackCount": 10,
+          "ticksPerBeat": 96
+        }
+        </pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Note ON</strong></h3>
+              </div>
+        
+              <div class="column">
+        <pre>
+        {
+          "deltaTime": 1660,
+          "channel": 0,
+          "type": "channel",
+          "noteNumber": 35,
+          "velocity": 115,
+          "subtype": "noteOn"
+        }
+        </pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Note ON</strong></h3>
+              </div>
+        
+              <div class="column">
+        <pre><code class="javascript">
+        /* ... */
+        
+        const timeoutId = setTimeout(() => {
+          dispatch({type, payload});
+        
+          InstrumentUtils.play(
+            noteNumber,
+            instrument,
+            currentTime,
+            velocity
+          );
+        
+          clearTimeout(timeoutId);
+        }, deltaTime);
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Note OFF</strong></h3>
+              </div>
+        
+              <div class="column">
+        <pre><code class="javascript">
+        /* ... */
+        
+        const timeoutId = setTimeout(() => {
+          dispatch({type, payload});
+        
+          instrument.stop();
+        
+          clearTimeout(timeoutId);
+        }, deltaTime);
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section>
+          <div class="wrap">
+            <h2>Delta Time ⏰ (in milliseconds)</h2>
+        
+            <ul>
+              <li>TicksPerBeat = 52 (Header)</li>
+              <li>Microseconds Per Beat = 689655 (SetTempo Event)</li>
+              <li>Microseconds Per Minute = 60000000 (Constant)</li>
+            </ul>
+        
+            <ul class="flexblock border blink">
+              <li><a href=""><strong>Tempo</strong></a></li>
+              <li><a href=""><strong>Binary</strong></a></li>
+              <li><a href=""><strong>Pulses</strong></a></li>
+              <li><a href=""><strong>Milliseconds</strong></a></li>
+        
+              <li><a href="">60000000 / 689655 = 87 BMP</a></li>
+              <li><a href="">11111111 01111111</a></li>
+              <li><a href="">16.383</a></li>
+              <li><a href="">16.383 * (60 / (87 * 52)) * 1000 = 217281</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/screenshots/midi-redux-screenshot.png');"></span>
+        </section>
+        
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align aligncenter">
+              <div class="column">
+                <figure>
+                  <img src="static/images/midi-redux-schema.png" alt="Midi Redux Schema">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>React Play Button</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="html">
+        &lt;PlayButton /&gt;
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <div class="wrap aligncenter">
+            <h2>React Play Button</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+        <pre><code class="javascript">
+        class PlayButton extends Component {
+          constructor(props) {
+            super(props);
+          }
+        
+          render() {
+            const play = this.props.playerActions.play;
+        
+            return (
+              &lt;button
+                className="play-button"
+                onClick={play}
+              /&gt;
+            );
+          }
+        };
+        </code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/gifs/instruments-playing.gif'); opacity:0.8;"></span>
+          <div class="wrap aligncenter">
+            <h1 class="text-data"><strong>DEMO</strong></h1>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h2>More MIDI, Music and JavaScript</h2>
+        
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=khsBjXKJOPs&t=1809s">Ruth John</a></li>
+              <li><a href="https://www.youtube.com/watch?v=UEbzTgHs5L0">Soledad Penadés</a></li>
+              <li><a href="https://www.youtube.com/watch?v=BEdFcnI-ppk">Sam Bellen</a></li>
+              <li><a href="https://www.youtube.com/watch?v=0MigafMWLh0">Jan Monschke</a></li>
+              <li><a href="https://www.youtube.com/watch?v=NL0nb8A8FDM&t=2343s">Matt McKegg</a></li>
+              <li><a href="https://www.youtube.com/watch?v=d8TCq0xLnV4">Chris Lowis</a></li>
+              <li><a href="https://www.youtube.com/watch?v=56spBAgOYfg&t=1521s">Steve Kinney</a></li>
+              <li><a href="https://www.youtube.com/watch?v=tSThM9Aw8ps">Stephen Band</a></li>
+              <li><a href="https://www.youtube.com/watch?v=KE2GC9lm6jw">Peter Piekarczyk</a></li>
+            </ul>
+        
+          </div>
+        </section>
+
+        <section class="bg-black">
+          <span class="background" style="background-image:url('./static/images/midi.jpeg'); opacity:0.3;"></span>
+          <div class="wrap aligncenter">
+            <h1 class="text-data"><strong>Thank You 💜</strong></h1>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <script src="static/js/webslides.js"></script>
+    <script defer src="static/js/svg-icons.js"></script>
+    <script defer src="static/js/highlight.pack.js"></script>
+    
+    <script>
+      window.onload = function() {
+        window.ws = new WebSlides();
+        window.hljs.initHighlighting();
+      };
+    </script>
+
+  </body>
+</html>

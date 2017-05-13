@@ -1,0 +1,107 @@
+<section>
+  <div class="wrap aligncenter">
+    <h2>REDUCER</h2>
+    <p>Initial State</p>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+const initialState = {
+  message: "Init Message",
+  midiAccess: null,
+  inputs: [], /* MIDI Inputs*/
+  audioContext: new window.AudioContext(),
+  gainNode: null,
+  notes: {}
+};
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>REDUCER</h2>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+export default function MIDIEventsReducer(state=initialState, action) {
+    const { type, payload } = action;
+
+    switch (type) {
+      case MIDIAction.NOTE_ON:
+      case MIDIAction.NOTE_OFF:
+        return {
+          ...state,
+          notes: payload.notes,
+          message: payload.message
+        }
+      /* more cases */
+      default:
+        return state;
+    }
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>ACTIONS</h2>
+    <div class="grid vertical-align">
+      <div class="column">
+<pre><code class="javascript">
+export default Object.freeze({
+  NOTE_ON: 'noteOn',
+  NOTE_OFF: 'noteOff',
+  CONTROLLER: 'controller'
+});
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap aligncenter">
+    <h2>ACTION CREATORS</h2>
+    <div class="grid">
+      <div class="column">
+<pre><code class="javascript">
+export function noteOn(event) {
+  return (dispatch, getState) => {
+    const state = getState();
+    const message = event.data;
+    const note = MidiUtils.getNote(message);
+
+    let notes = state.midi.notes;
+    let ac = state.midi.audioContext;
+
+    if (!notes[note]) {
+      notes[note] = AudioUtils.generateOscillator(note, ac);
+      notes[note].start();
+    }
+
+    dispatch({
+      type: MidiAction.NOTE_ON,
+      payload: { message, notes }
+    });
+  };
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-black">
+  <span class="background" style="background-image:url('./static/images/gifs/playing-piano.gif'); opacity:0.7;"></span>
+  <div class="wrap aligncenter">
+    <h1 class="text-data"><strong>Demo</strong></h1>
+  </div>
+</section>
